@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Document Object Model</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+
+<script>
+    // 🚩 Select parent element and get the values of parent element.
+    const parent = document.querySelector(".parent");
+    // console.log(parent.children)
+    // console.log(parent.children[0])
+    // console.log(parent.children[0].innerHTML)
+
+
+    // 🚩 Accessing parent values through For Loop:
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     console.log(parent.children[i].innerHTML);
+    // }
+
+
+    // 🚩 Styling elements
+    parent.children[1].style.color = "orange"
+
+
+    // 🚩 Targeting values:
+    // console.log(parent.firstElementChild)
+    // console.log(parent.lastElementChild)
+
+
+    // 🚩 Targeting values:
+    const dayOne = document.querySelector(".day");
+    // console.log(dayOne)
+    // console.log(dayOne.parentElement)
+    // console.log(dayOne.nextElementSibling)
+
+    // console.log("Nodes: ", parent.childNodes)
+</script>
+</html>
