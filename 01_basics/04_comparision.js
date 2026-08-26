@@ -1,4 +1,4 @@
-// Avoid these conversions - 
+// Avoid these conversions:
 // console.log(null > 0);
 // console.log(null == 0);
 // console.log(null >= 0);
@@ -8,6 +8,5 @@
 // console.log(undefined < 0);
 
 
-// ===
+// Strict check: === also checks the datatype
 console.log("2" === 2);
-

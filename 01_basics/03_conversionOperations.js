@@ -1,42 +1,48 @@
+// let score = 33;
 // let score = "33abc";
 // let score = null;
 // let score = undefined;
 // let score = true;
 // let score = false;
-let score = "adam";
 
-// "33" => 33
-// "33abc" => NaN (Not a Number)
-// true => 1, false => 0
-
-// console.log(typeof score);
-// console.log(typeof (score));
+// console.log(typeof score) 
+// console.log(typeof(score)) // second way
 
 
-let valueInNumber = Number(score);
-// console.log(typeof valueInNumber);
-// console.log(valueInNumber);
+
+// 1. Number conversion:
+// let score = "33abc"; // returns NaN (Not a Number)
+// let score = null; // returns 0
+// let score = undefined; // returns NaN (Not a Number)
+// let score = true; // returns 1
+// let score = false; // returns 0
+let score = "adam"; // returns NaN (Not a Number)
+
+let valueInNumber = Number(score); // mostly used in react or typescript
+// console.log(typeof valueInNumber)
+// console.log(valueInNumber) 
 
 
-// let isLoggedIn = 1;
-// let isLoggedIn = 0;
-// let isLoggedIn = "";
-let isLoggedIn = "adam";
 
-// 1 => true
-// 2 => false
-// "" => flase
-// "adam" => true
+// 2. Boolean conversion:
+// let isLoggedIn = 1; // true
+// let isLoggedIn = 0; // false
+// let isLoggedIn = ""; // false
+let isLoggedIn = "adam"; // true
 
 let booleanIsLoggedIn = Boolean(isLoggedIn)
-// console.log(booleanIsLoggedIn);
+// console.log(booleanIsLoggedIn)
 
 
+
+// 3. String conversion:
 let someNumber = 33;
 let stringNumber = String(someNumber);
 
-// console.log(stringNumber);
+// console.log(stringNumber)
 // console.log(typeof stringNumber);
+
+
 
 // ************************************ Operations ************************************
 
@@ -49,22 +55,32 @@ let negValue = -value;
 let str1 = "hello";
 let str2 = " friend";
 let str3 = str1 + str2;
+// console.log(str3)
 
-// console.log(str3);
-// console.log("1" + 2);
-// console.log(1 + "2");
-// console.log("1" + 2 + 2 );
-// console.log(1 + 2 + "2" );
+// Complex situations:
+// console.log("1" + 2) // 12
+// console.log(1 + "2") // 12
+// console.log("1" + 2 + 2 ) // 122
+// console.log(1 + 2 + "2" ) // 32 - because converting into preffered type (string or number) in EcmaScript
 
-
-
+// Not recommended:
 // console.log(true);
-// console.log(+true); // increment
-// console.log(true+); // not recommended
-// console.log(+"");   // not recommended
+// console.log(+true); 
+// console.log(true+); 
+// console.log(+"");   
 
+// let num1, num2, num3
+// num1 = num2 = num3 = 2 + 2
 
+let gameCounter = 100;
+// gameCounter++; 
+// console.log(gameCounter)
 
-// let gameCounter = 100;
-// gameCounter++;
-// console.log(gameCounter);
+// Prefix and Postfix:
+let x = 3;
+const y = x++;
+// console.log(`x:${x}, y:${y}`); // x:4, y:3
+
+let a = 3;
+const b = ++a;
+// console.log(`a:${a}, b:${b}`); // a:4, b:4
