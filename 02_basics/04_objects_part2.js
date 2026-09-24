@@ -1,75 +1,53 @@
-// const tinderUser = new Object(); // Singleton object 
-const tinderUser = {}; // Non-Singleton object 
+const tinderUserOne = new Object(); // Singleton object as a constructor
+const tinderUserTwo = {}; // Non-Singleton object 
 
-tinderUser.id = "123abc";
-tinderUser.name = "Ram";
-tinderUser.idLoggedIn = false;
-// console.log(tinderUser);
+// here both returns the same empty objects
+// console.log(tinderUserOne);
+// console.log(tinderUserTwo);
+
+tinderUserTwo.id = "123abc";
+tinderUserTwo.name = "Vikram";
+tinderUserTwo.isLoggedIn = false;
+// console.log(tinderUserTwo); // returns object
 
 
+// Object inside Object
 const regularUser = {
     email: "someone@gmail.com",
     fullname: {
         userfullname: {
-            firstname: "Leo",
+            firstname: "Ram",
             lastname: "Das"
         }
     }
-}
+};
+
+// console.log(regularUser.fullname);
 // console.log(regularUser.fullname.userfullname.lastname); // open nesting through accessing values from . notation
 
+// console.log(regularUser.fullname ? regularUser.fullname.userfullname.firstname : regularUser.fullname.userfullname.lastname) // Ternary Operator: condition ? () : ()
 
 
 const obj1 = { 1: "a", 2: "b" };
 const obj2 = { 3: "c", 4: "d" };
-const obj4 = { 5: "e", 6: "f" };
+
+// const obj3 = { obj1, obj2 };
+// console.log(obj3);
+
 // const obj3 = Object.assign(obj1, obj2);
-// const obj3 = Object.assign({}, obj1, obj2, obj4); // optional {} for guaranteed result. (target, source) - least usage.
-const obj3 = { ...obj1, ...obj2, ...obj4 } // mostly we use spread operator.
+// const obj3 = Object.assign({}, obj1, obj2); // returns same object but giving optional param {} is good, least usage
+// console.log(obj3);
+
+const obj3 = { ...obj1, ...obj2 }; // Spread Operator, mostly used
 // console.log(obj3);
 
 
-// very important
-// console.log(tinderUser);
-// console.log(Object.keys(tinderUser));
-// console.log(Object.values(tinderUser));
-// console.log(Object.entries(tinderUser)); // least usage.
+// Very important - specially used in DB
+// console.log(tinderUserTwo);
 
-// console.log(tinderUser.hasOwnProperty('email'));
+// console.log(Object.keys(tinderUserTwo)); // here it returns datatype Array, now can run loop etc... 
+// console.log(Object.values(tinderUserTwo));
 
+// console.log(Object.entries(tinderUserTwo)); // Array inside Array, least usage.
 
-
-
-const course = {
-    courseName: "JavaScript",
-    price: "999",
-    courseInstructor: "Mr Nobody"
-}
-// course.courseInstructor
-
-// const {courseInstructor} = course;
-const { courseInstructor: instructor } = course; // de-structring object
-
-// console.log(courseInstructor);
-console.log(instructor);
-
-
-// example for React we use de-structuring:
-// const navbar = ({instructor}) => {
-// }
-// navbar(company = "Mr Nobody")
-
-
-
-// API small intro: we get API in form of objects or array inside objects like this -
-// {
-//     sdfasfasdfas
-//     asdfasdfasdfa
-//     asdfasdfadsf
-// }
-
-// [
-//     {},
-//     {},
-//     {}
-// ]
+console.log(tinderUserTwo.hasOwnProperty('isLoggedIn'));

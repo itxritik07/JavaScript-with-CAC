@@ -1,47 +1,60 @@
-// singleton
-// Object.create
+// Two ways to declare Objects: (1) Literal and (2) Constructor
+// Simple Note: 
+// Object created from literals singleton does not work out
+// Object created from constructor always singleton. [Object.create: make through constructor method, discuss this later]
 
-// object litreals
 
-// Define symbol and use in object as an key
-const mySymbol = Symbol("key123");
-
+// Object litreals:
 const jsUser = {
-    name: "Admin",
-    "full name": "Admin Castle", // we can not get this by using .
-    // mySymbol: "myKey1", // shows String.
-    [mySymbol]: "myKey1", // proper syntax to declare symbol .
-    age: 18,
-    location: "India",
-    email: "admin@yahoo.com",
+    name: "Batman",
+    "full name": "Bruce Wayne", // can get this by console.log(jsUser["email"]) only
+    age: 34,
+    location: "USA",
+    email: "batman@marvel.com",
     isLoggedIn: false,
     lastLoginDays: ["Monday", "Saturday"]
-}
+};
 
-// console.log(jsUser.email); // ❌ correct way.
-// console.log(jsUser["full name"]); // ❌ cant use.
-// console.log(typeof jsUser.mySymbol); // typeof shows String.
-// console.log(jsUser[mySymbol]); // typeof shows Symbol.
-
-
-// jsUser.email = "admin@google.com";
-// Object.freeze(jsUser); // email do not change afte this.
-
-// jsUser.email = "admin@chatgpt.com";
-// console.log(jsUser);
+// console.log(jsUser.email); // can access email but this is not the right way
+// console.log(jsUser["email"]); // correct way to access (BTS it is defined as a String "email")
+// console.log(jsUser["full name"]); // here the catch
 
 
-jsUser.greetingOne = function(){
+
+// IQ. Take a symbol, add it to the object's keys, and print it.
+const mySymbol = Symbol("key123");
+
+const jsUserTwo = {
+    name: "Batman",
+    [mySymbol]: "key123", // refer a Symbol, accessing it by [ ]
+    age: 34,
+    email: "superman@marvel.com"
+};
+
+// console.log(typeof jsUserTwo[mySymbol]);
+// console.log(jsUserTwo);
+
+// console.log(jsUserTwo["email"]);
+// console.log(jsUserTwo.email = "thor@marvel.com"); // overwrite the email
+// console.log(jsUserTwo);
+
+// Object.freeze(jsUserTwo); // freeze the email
+
+// console.log(jsUserTwo.email = "spiderman@marvel.com"); // can not change because you freeze the email
+// console.log(jsUserTwo);
+
+
+
+jsUser.greetingOne = function () {
     console.log("Hello Js User");
 }
-jsUser.greetingTwo = function(){
+jsUser.greetingTwo = function () {
     console.log(`Hello Js User, ${this.name}`);
 }
-
 
 console.log(jsUser.greetingOne());
 console.log(jsUser.greetingTwo());
 
-
-
-
+// Note:
+// In most of the cases we use jsUser.email to access the values
+// but in some cases like Symbol as a key example we have no choice that's why we use - jsUser["email"] to access the values
