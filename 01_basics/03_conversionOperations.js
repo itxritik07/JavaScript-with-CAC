@@ -11,7 +11,7 @@
 
 
 // 1. Number conversion:
-// let score = "33abc"; // returns NaN (Not a Number)
+// let score = "33abc"; // returns NaN (Not a Number) 
 // let score = null; // returns 0
 // let score = undefined; // returns NaN (Not a Number)
 // let score = true; // returns 1
@@ -47,7 +47,7 @@ let stringNumber = String(someNumber);
 // ************************************ Operations ************************************
 
 let value = 3;
-let negValue = -value;
+let negValue = -value; // returns -3
 
 // console.log(negValue);
 
@@ -57,26 +57,33 @@ let str2 = " friend";
 let str3 = str1 + str2;
 // console.log(str3)
 
+
 // Complex situations:
 // console.log("1" + 2) // 12
 // console.log(1 + "2") // 12
 // console.log("1" + 2 + 2 ) // 122
 // console.log(1 + 2 + "2" ) // 32 - because converting into preffered type (string or number) in EcmaScript
 
-// Not recommended:
-// console.log(true);
-// console.log(+true); 
-// console.log(true+); 
-// console.log(+"");   
 
-// let num1, num2, num3
-// num1 = num2 = num3 = 2 + 2
+// Not recommended
+// console.log(true); // returns true
+// console.log(+true); // returns 1
+// console.log(true+); // returns error
+// console.log(+"");  // returns 0
 
+// Not recommended
+// let num1, num2, num3;
+// num1 = num2 = num3 = 2 + 2;
+
+
+// Prefix and Postfix: 
+// Prefix:the value is incremented first. 
+// Postfix: the value is incremented afterwards.
 let gameCounter = 100;
-// gameCounter++; 
-// console.log(gameCounter)
+gameCounter++; 
+console.log(gameCounter);
 
-// Prefix and Postfix:
+
 let x = 3;
 const y = x++;
 // console.log(`x:${x}, y:${y}`); // x:4, y:3

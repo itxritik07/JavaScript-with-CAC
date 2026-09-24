@@ -3,19 +3,19 @@ const accountId = 144553; // const can not be change, accoundId is a memory keyw
 
 
 let accountEmail = "admin@gmail.com"; // replacement of var beccause of scope{} concept
-accountEmail = "user@gmail.com" 
+accountEmail = "user@gmail.com"; 
 
 
-var accountPassword = "12345"; // prefer not to use var because of issue in block scope and functional scope.
-accountPassword = "6789"
+var accountPassword = "12345"; // prefer not to use var because of issue in block scope and functional scope
+accountPassword = "6789";
 
 
 accountCity = "Mohali"; // also allocation memory in accountCity and can be changed but not recommended 
-accountCity = "Chandigarh"
+accountCity = "Chandigarh";
 
 
-// console.table([accountEmail, accountPassword, accountCity])
+// console.table([accountEmail, accountPassword, accountCity]);
 
 
 let accountState ; // declaring variable without assingning a value returns undefined
-// console.log(accountState)
+console.log(accountState)

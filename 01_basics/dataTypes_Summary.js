@@ -1,33 +1,34 @@
 // 1. Primitive datatypes: call by value
 // 7 types: Null, Number, String, Symbol, Undefined, Boolean, BigInt
 
+
 // Symbol example: specially declaring Sybmbol keyword
 const id = Symbol("123"); 
 const anotherId = Symbol("123");
-// console.log(id === anotherId) // false
+// console.log(id === anotherId) // returns false
+
 
 // BigInt example: n - automatically changes into BigInt
 const bigNumber = 1324123412341234n;
 
 
 // 2. Refrence type (Non-Primitive datatypes) - call by refrence
-// Js dynamically typed language
-
+// Note: JavaScript is dynamically typed language
 // Array, Objects, Functions (master these, also browse events)
+
 const myHeros = ["Iron Man", "Spiderman", "Thor", "Daredevil"];
 
 let myObj = {
     name: "Adam",
     age: 23,
-}
+};
 
-// Declaring function in a variable:
+// Declaring function as a variable:
 const myFunction = function(){
     // console.log("Hello World");
-}
+};
 
-// console.log(typeof myFunction) // function, but called as object function or functoin object
-
+console.log(typeof myFunction) // returns function, but called as object function or functoin object 
 
 
 // ********************** Memory **********************
@@ -48,7 +49,8 @@ let userOne = {
 }
 
 let userTwo = userOne;
+
 userTwo.email = "admin@gmail.com";
 
-// console.log(userOne.email);
-// console.log(userTwo.email);
+console.log(userOne.email);
+console.log(userTwo.email);
