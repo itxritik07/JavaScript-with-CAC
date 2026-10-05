@@ -10,7 +10,7 @@ const course = {
 // console.log(course.courseInstructor);
 
 const { courseInstructor } = course;  // concept of Object De-structuring, 
-console.log(courseInstructor); // directly access values
+// console.log(courseInstructor); // directly access values
 
 const { courseInstructor: instructor } = course; // can set short name
 // console.log(instructor);

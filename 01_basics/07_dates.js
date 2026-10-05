@@ -3,19 +3,23 @@ let myDate = new Date();
 // console.log(myDate.toString());
 // console.log(myDate.toDateString());
 // console.log(myDate.toLocaleString());
-// console.log(typeof myDate); // object
+// console.log(typeof myDate); // returns Object
 
-// Note: Months starts with 0
+// GMT = Greenwich Mean Time
+// UTC = Coordinated Universal Time
+
+// Note: Months starts with 0 in JavaScript like index
 
 // let myCreatedDate = new Date(2026, 6, 9, 16, 44);
 // let myCreatedDate = new Date("2026-7-9"); // Default 
-let myCreatedDate = new Date("09-07-2026"); // India
+// let myCreatedDate = new Date("09-07-2026"); // India
 // console.log(myCreatedDate.toDateString());
 // console.log(myCreatedDate.toLocaleString());
 
 
-let myTimeStamp = Date.now();
+// let myTimeStamp = Date.now();
 // console.log(myTimeStamp);
+
 // console.log(myCreatedDate.getTime());
 // console.log(Math.floor(Date.now() / 1000)); // imp
 

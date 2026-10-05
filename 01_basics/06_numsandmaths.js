@@ -6,7 +6,7 @@ const balance = new Number(100);
 
 // console.log(balance.toString());
 // console.log(balance.toString().length);
-// console.log(balance.toFixed(2)); // mostly used prices for ecommerce applications. 
+// console.log(balance.toFixed(2)); // mostly used prices for ecommerce applications.
 
 const otherNumber = 123.8966;
 // console.log(otherNumber.toPrecision(3)); // gives the precision price.
@@ -15,7 +15,7 @@ const hundreds = 1000000;
 // console.log(hundreds.toLocaleString()); // Indian standard Number System
 
 
-// ****************************** Maths ******************************
+// ----------------------------------------------- Mathematics -----------------------------------------------
 
 
 // console.log(Math); // returns empty object
@@ -39,7 +39,8 @@ const hundreds = 1000000;
 // console.log(Math.ceil(Math.random() * 10) + 1); // can be 11
 
 // console.log((Math.random() * 6) + 1); // mostly used , always between 0 and 1 - making dice
-// console.log(Math.floor(Math.random() * 10) + 1);
+// console.log(Math.floor(Math.random() * 10) + 1); // returns number between 1-10
+
 
 // Important Formula: to get number between 10 to 20 
 const min = 10;

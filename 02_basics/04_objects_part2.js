@@ -1,9 +1,8 @@
 const tinderUserOne = new Object(); // Singleton object as a constructor
 const tinderUserTwo = {}; // Non-Singleton object 
 
-// here both returns the same empty objects
-// console.log(tinderUserOne);
-// console.log(tinderUserTwo);
+// console.log(tinderUserOne); // here both returns the same empty objects
+// console.log(tinderUserTwo); // here both returns the same empty objects
 
 tinderUserTwo.id = "123abc";
 tinderUserTwo.name = "Vikram";
@@ -16,7 +15,7 @@ const regularUser = {
     email: "someone@gmail.com",
     fullname: {
         userfullname: {
-            firstname: "Ram",
+            firstname: "Laxman",
             lastname: "Das"
         }
     }
@@ -25,20 +24,20 @@ const regularUser = {
 // console.log(regularUser.fullname);
 // console.log(regularUser.fullname.userfullname.lastname); // open nesting through accessing values from . notation
 
-// console.log(regularUser.fullname ? regularUser.fullname.userfullname.firstname : regularUser.fullname.userfullname.lastname) // Ternary Operator: condition ? () : ()
+// console.log(regularUser.fullname ? regularUser.fullname.userfullname.firstname : regularUser.fullname.userfullname.lastname); // Ternary Operator: condition ? () : ()
 
 
 const obj1 = { 1: "a", 2: "b" };
 const obj2 = { 3: "c", 4: "d" };
 
 // const obj3 = { obj1, obj2 };
-// console.log(obj3);
+// console.log(obj3); // returns {{},{}}
 
 // const obj3 = Object.assign(obj1, obj2);
 // const obj3 = Object.assign({}, obj1, obj2); // returns same object but giving optional param {} is good, least usage
 // console.log(obj3);
 
-const obj3 = { ...obj1, ...obj2 }; // Spread Operator, mostly used
+// const obj3 = { ...obj1, ...obj2 }; // Spread Operator, mostly used
 // console.log(obj3);
 
 
@@ -50,4 +49,4 @@ const obj3 = { ...obj1, ...obj2 }; // Spread Operator, mostly used
 
 // console.log(Object.entries(tinderUserTwo)); // Array inside Array, least usage.
 
-console.log(tinderUserTwo.hasOwnProperty('isLoggedIn'));
+// console.log(tinderUserTwo.hasOwnProperty('isLoggedIn'));

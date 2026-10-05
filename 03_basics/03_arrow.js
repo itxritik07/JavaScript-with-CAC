@@ -1,57 +1,61 @@
+// this: refers to the current context or value
 const user = {
-    username: "Elli",
+    username: "Rolex",
     price: 999,
-
     welcomeMessage: function () {
-        // console.log(`${this.username}, welcome to website`)
-        // console.log(this)
+        // console.log(`${username}, welcome to website`); // returns error
+        console.log(`${this.username}, welcome to website`);
+        // console.log(this); // returns user's Object {}
     }
-}
+};
+// user.welcomeMessage();
+// user.username = "Samay"; // here we change context
+// user.welcomeMessage();
+// console.log(this); // returns epmty {} in Node environment, but in browser it gives you window (Prereqset)
 
-// user.welcomeMessage()
-// user.username = "Sam"
-// user.welcomeMessage()
-// console.log(this) // here gives you empty {} object, but in browser it gives you window (Prereqset)
 
 
-// this keyword:
-// function chai(){
-//     let username = "Elli";
-//     console.log(this);
-//     console.log(this.username);
-// }
+// this keyword works in function ?
+function chai() {
+    let username = "Batman";
+    // console.log(this);
+    console.log(this.username); // returns undefined, because this keyword works only in objects not in functions, for here remember
+};
 // chai();
 
 
+// also Check in Funtion Expression:
 // const chai = function () {
-//     let username = "Elli";
-//     console.log(this.username);
-// }
-// chai()
+//     let username = "Spiderman";
+//     console.log(this.username); // also returns undefined
+// };
+// chai();
 
 
-// Arrow function: 
-// const chai = () => {
-//     let username = "Elli";
-//     console.log(this.username);
-//     console.log(this);
-// }
-// chai()
+// Arrow function: combination of Function Expression and remove the name (function only)
+// const chaiOne = () => { 
+//     let username = "Ellie";
+//     console.log(this.username); // also returns undefined
+//     // console.log(this);
+// };
+// chaiOne();
 
 
-// Basic Arrow function: (Explicit return - means we have to use return if we use { })
+// Basic Arrow function: (Explicit return: use {} with return)
 // const addTwo = (num1, num2) => { 
-//     return num1 + num2
-// }
+//     return num1 + num2;
+// };
+// console.log(addTwo(3, 4));
 
 
-// Implicit return means we can directly write values 
-// const addTwo = (num1, num2) => num1 + num2 ;
-// const addTwo = (num1, num2) => (num1 + num2) ; // also we can use ()
+// Implicit return: not using {} and return, also can we use () - that's for one line statement
+// const addTwo = (num1, num2) => num1 + num2;
+// const addTwo = (num1, num2) => (
+//     num1 + num2
+// ); // also we can use ()
+// console.log(addTwo(3, 4));
 
 
 // Return object: we have to implement ({})
-const addTwo = (num1, num2) => ({ username: "Sam" }); 
-
-console.log(addTwo(3, 4))
-
+const addTwo = () => ({ username: "Sam" });
+console.log(addTwo());

@@ -1,17 +1,23 @@
-// Immediately Invoked Fucnction Expression (IIFE):
+// function chai() {
+//     console.log(`DB Connected`)
+// };
+// chai();
+
+
+// Immediately Invoked Fucnction Expression (IIFE): avoid problem of global scope pollution
+// named IIFE
 (function chai() {
-    // named IIFE
     console.log(`DB Connected`)
-})(); // ; to end this task here.
+})(); // semicolon is important here to end this task, so next function can able to run
 
 
+// un-named IFFE
 (() => {
-    // un-named IFFE
-    console.log(`DB Connected two`);
+    console.log(`DB Connected Two`)
 })();
 
 
+// passing params
 ((name) => {
-    // passing params
-    console.log(`DB Connected two by - ${name}`);
+    console.log(`DB Connected Three by - ${name}`);
 })("Sam");

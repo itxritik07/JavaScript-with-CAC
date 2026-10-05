@@ -1,58 +1,85 @@
-let a = 100
+// let a = 10;
+// const b = 20;
+// var c = 30;
+// console.log(a);
+// console.log(b);
+// console.log(c);
 
+
+// Scope:
 if (true) {
-    let a = 10
-    // const b = 20
-    // var c = 30
-    // console.log("Inner: ", a) // block scope
+    let a = 10;
+    const b = 20;
+    var c = 30;
+    console.log("Inner: ", a); // block scope
 }
-
-// console.log("Outer", a) // global scope
-// console.log(b)
-// console.log(c) // the problem is here
-
+// console.log(a);
+// console.log(b);   
+// console.log(c);
 
 
+// Block and Global Scope:
+let a = 100;
+if (true) {
+    let a = 10;
+    // console.log(a); // runs first
+}
+// console.log(a); // runs second
 
-// Nested Scope
+// NOTE: checking Global Scope in browser vs here are two different things.
+
+
+// --------------------------------------------------- PART TWO -------------------------------------------------------------
+
+
+// Nested Scope: function inside function
 function one() {
-    const username = "Admin"
+    const username = "Superman";
 
     function two() {
-        const website = "www.admin_website.com"
-        // console.log(username) // ✅ parent
-        // console.log(website) // ✅ child
+        const website = "www.superman_website.com";
+        // console.log(username); // returns second
+        // console.log(website); //  returns third
     }
-    // console.log(website) // ❌ child
-    // console.log(username) // ✅ parent
+    // console.log(website); // returns error out of scope
+    // console.log(username); // returns first
+    // two();
+};
+// one();
 
-    // two()
-}
-// one()
-
-
+// if...else example:
 if (true) {
-    const username = "Elli"
+    const username = "Batman";
 
-    if (username === "Elli") {
-        const website = " yt"
-        // console.log(username + website)
-    }
-    // console.log(website) // ❌
-}
-// console.log(username) // ❌
+    if (username === "Batman") {
+        const website = " marvel";
+        // console.log(username + website);
+    };
+    // console.log(website) // returns error out of scope
+};
+// console.log(username) // returns error out of scope
 
 
-
-// ****************************** intresting fact (Hoisting) ******************************
-
-console.log(addOne(5)) // ✅
+// Normal Funtion:
 function addOne(num) {
-    return num + 1
-}
+    return num + 1;
+};
+// addOne(2);
+
+// Function Expression: function holds under a variable
+const addTwo = function (num) {
+    return num + 2;
+};
+// addTwo(2);
 
 
- console.log(addTwo(5)) // ❌
-const addTwo = function(num) {
+// Concept of Hoisting:
+// console.log(addThree(5)) // it works
+// function addThree(num) {
+//     return num + 1
+// };
+
+// console.log(addFour(5)) // we can't execute this function here before initialization
+const addFour = function (num) {
     return num + 2
-}
+};

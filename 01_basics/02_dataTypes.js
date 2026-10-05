@@ -1,9 +1,9 @@
-// "use strict" // treat all Js code as newer version you can see this in older codes
+// "use strict" // treat all Js code as newer version, you can see this in older codes
 
-// alert(2 + 2) // Node vs Browser it returns different. JavaScript engine is embedded within the browser. That's why in browser it returns 4
+// alert(2 + 2); // Node vs Browser it returns different. JavaScript engine is embedded within the browser. That's why in browser it returns 4
 
 // MdnDocs is recommended (mozilla org.)
-// original docs of Js in tc39.es , writing code in EcmaScript statndard
+// original docs of Js in tc39.es , writing code in EcmaScript Standard
 
 // Datatypes:
 let name = "Admin" // string

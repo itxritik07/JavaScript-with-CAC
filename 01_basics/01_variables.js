@@ -18,4 +18,4 @@ accountCity = "Chandigarh";
 
 
 let accountState ; // declaring variable without assingning a value returns undefined
-console.log(accountState)
+// console.log(accountState)

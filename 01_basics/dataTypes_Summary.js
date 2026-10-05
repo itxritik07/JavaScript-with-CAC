@@ -5,11 +5,12 @@
 // Symbol example: specially declaring Sybmbol keyword
 const id = Symbol("123"); 
 const anotherId = Symbol("123");
-// console.log(id === anotherId) // returns false
+// console.log(id === anotherId); // returns false
 
 
-// BigInt example: n - automatically changes into BigInt
+// BigInt example: n - number automatically changes into BigInt
 const bigNumber = 1324123412341234n;
+// console.log(typeof bigNumber);
 
 
 // 2. Refrence type (Non-Primitive datatypes) - call by refrence
@@ -25,32 +26,34 @@ let myObj = {
 
 // Declaring function as a variable:
 const myFunction = function(){
-    // console.log("Hello World");
+    console.log("Hello World");
 };
+// myFunction();
 
-console.log(typeof myFunction) // returns function, but called as object function or functoin object 
+// console.log(typeof myFunction); // returns function, but called as object function or function object 
 
 
-// ********************** Memory **********************
+// ------------------------------------------------ Memory ------------------------------------------------
 
-// Stack memory (Primitive) - you get the copy of declared variable - Null, Number, String, Symbol, Undefined, Boolean, BigInt
-// Heap memory (Non-Primitive) - you get the refrence of original value - Array, Objects, Functions
+
+// Stack memory (Primitive) - you get the copy of declared variable (Null, Number, String, Symbol, Undefined, Boolean, BigInt)
+// Heap memory (Non-Primitive) - you get the refrence of original value (Array, Objects, Functions)
 
 let myYtName = "codewithadam";
 let anotherName = myYtName;
 anotherName = "coderadam";
-// console.log(myYtName) // remains same value
-// console.log(anotherName) // value changed
+// console.log(myYtName); // remains same value
+// console.log(anotherName); // value changed
 
 
 let userOne = {
     email : "userone@gmail.com",
     upi: "user@ybl"
-}
+};
 
 let userTwo = userOne;
 
 userTwo.email = "admin@gmail.com";
 
-console.log(userOne.email);
-console.log(userTwo.email);
+console.log(userOne.email); // returns admin@gmail.com
+console.log(userTwo.email); // returns admin@gmail.com
